@@ -1,4 +1,7 @@
-class IBMQHandler:
+from ..handler import Handler
+from ..exceptions import *
+
+class IBMQHandler(Handler):
   """
     NOTE: Make sure to install python SSL cerfiicates or you will not be able to access IBMQ
   """
@@ -40,10 +43,3 @@ class IBMQHandler:
   """
   def use_simulator(self):
     return self.simulatorBackend
-
-  """
-    Writes output results to file
-  """
-  def write_results_to_file(self, results):
-    with open(f'results/raw_results_{self.currentDeviceName}.txt', 'w') as file:
-      file.write(str(results))
