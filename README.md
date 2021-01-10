@@ -18,7 +18,7 @@ You can then activate and reactivate your environment to your liking with:
 
 ```
 deactivate
-source source [environment-name]/bin/activate
+source [environment-name]/bin/activate
 ```
 
 ## Contributing
