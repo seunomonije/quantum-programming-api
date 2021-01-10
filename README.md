@@ -20,3 +20,8 @@ You can then activate and reactivate your environment to your liking with:
 deactivate
 source source [environment-name]/bin/activate
 ```
+
+## Contributing
+
+Contributions are only accepted via pull requests. See [Creating A Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#changing-the-branch-range-and-destination-repository) to see how to do so.
+
