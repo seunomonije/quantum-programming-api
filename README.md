@@ -1,8 +1,8 @@
 # Quantum Programming API
 
-Common Q&A:
+This API aims to create an infrastructure where programmers can use the power of quantum systems and quantum algorithms in every day programs. The goal of this project is to eventually have plug-and-play package that allows progammers to easily incorporate real quantum computing power into their projects for mainly experimental purposes.
 
-**NOTE:** This project is in the development stage. Our plans are to provide a plug-and-play API for you to experiment with yourself, but for now we are more focused on developing the API.
+**NOTE:** This project is in the development stage.
 
 ## Installation
 
@@ -14,3 +14,9 @@ source [environment-name]/bin/activate
 pip install --upgrade pip && pip install -r requirements.txt
 ```
 
+You can then activate and reactivate your environment to your liking with:
+
+```
+deactivate
+source source [environment-name]/bin/activate
+```
