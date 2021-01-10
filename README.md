@@ -27,3 +27,22 @@ Contributions are only accepted via pull requests. See [Creating A Pull Request]
 
 For now, you can either submit a pull request via a forked repository, or just create a branch pertaining to the issue and submit a PR from there.
 
+If you're submitting from a forked repository, make sure to set your track the main repo with:
+
+```
+git remote add upstream https://github.com/seunomonije/quantum-programming-api.git
+```
+
+and then update your local master branch with the main repo's master branch with:
+
+```
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
+
+and then update your branch with 
+
+```
+git merge master
+```
