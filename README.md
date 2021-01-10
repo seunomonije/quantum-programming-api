@@ -40,9 +40,3 @@ git fetch upstream
 git checkout master
 git merge upstream/master
 ```
-
-and then update your branch with 
-
-```
-git merge master
-```
