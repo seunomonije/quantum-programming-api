@@ -25,3 +25,5 @@ source [environment-name]/bin/activate
 
 Contributions are only accepted via pull requests. See [Creating A Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#changing-the-branch-range-and-destination-repository) to see how to do so.
 
+For now, you can either submit a pull request via a forked repository, or just create a branch pertaining to the issue and submit a PR from there.
+
