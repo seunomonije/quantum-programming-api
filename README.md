@@ -9,16 +9,16 @@ This API aims to create an infrastructure where programmers can use the power of
 We highly recommend using a virtual environment when interacting with the API. You can create, activate, and install the dependencies with the command sequence:
 
 ```
-python -m venv [environment-name]
-source [environment-name]/bin/activate
-pip install --upgrade pip && pip install -r requirements.txt
+python -m venv env # Create a virtual environment named "env"
+source env/bin/activate # Activate the environment
+pip install --upgrade pip && pip install -r requirements.txt # Install requirements for the API
 ```
 
 You can then activate and reactivate your environment to your liking with:
 
 ```
-deactivate
-source [environment-name]/bin/activate
+deactivate # Deactivate the environment
+source env/bin/activate
 ```
 
 ## Contributing
