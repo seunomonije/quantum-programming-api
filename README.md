@@ -40,3 +40,5 @@ git fetch upstream
 git checkout master
 git merge upstream/master
 ```
+
+Don't forget to `git push` after to sync your online and offline repositories.
