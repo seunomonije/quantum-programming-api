@@ -1,3 +1,6 @@
 # Python frameworks
 cirq
 qiskit
+
+# Testing
+pytest
