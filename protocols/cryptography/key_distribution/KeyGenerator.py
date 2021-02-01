@@ -6,9 +6,6 @@ import re
 
 from exceptions import InvalidBitstringError, InvalidQuantumKeyError
 
-# Setting a seed for the purposes of demonstration
-np.random.seed(seed=0)
-
 """
   First iteration of key generation class. 
   Use:
@@ -35,6 +32,9 @@ class KeyGenerator:
       # Check for invalid string
       if not re.match(r'^[0-1]{1,}$', bit_string):
         raise InvalidBitstringError('Your bit string input contains a non 0 or 1 character')
+      
+      if len(bit_string <= 100):
+        raise InvalidBitstringError('Your bit string length input is too small. Must be more than 100.')
 
       self.bit_string = bit_string
       self.bit_string_length = len(bit_string)
