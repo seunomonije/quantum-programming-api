@@ -65,3 +65,4 @@ class IntArray(CPPWrapper):
 
       result = [i for i in array.contents]
       return result
+      
