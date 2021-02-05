@@ -4,3 +4,6 @@ env/
 # Caches
 __pycache__/
 .pytest_cache/
+
+# Others
+make.txt
