@@ -17,6 +17,7 @@ from exceptions import InvalidBitstringError, InvalidQuantumKeyError
     - Offload random number generation to C++
     - Figure out how to package/send encoded message outside of the class. Pickle? Would that work?
     - Test this out on the blockchain and see if we can get working results. 
+    - Finish backend setup so that we're using the API to help itself.
 """
 class KeyGenerator:
   def __init__(self, bit_string=None, bit_string_length=200):
