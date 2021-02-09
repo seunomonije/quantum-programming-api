@@ -52,7 +52,10 @@ class IntArray(CPPWrapper):
     def __init__(self):
         self.obj = self.lib.IntArray_new()
         self.list_of_pointers = []
-
+    
+    def set_time_based_random_seed(self):
+      self.lib.IntArray_set_time_based_random_seed(self.obj)
+      
     def free_allocated_memory(self):
       for pointer in self.list_of_pointers:
         self.lib.IntArray_free(self.obj, pointer)

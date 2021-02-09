@@ -16,8 +16,12 @@ class IntArray {
         /* 
           Specific use-cases
         */
+
+        void set_time_based_random_seed() {
+          srand(time(0)); // Should only be done once per program
+        }
+
         int* generate_random_bit_array(int size) {
-          srand(time(0)); // Unconventional..should only be done once. Singleton?
           // Allocates new memory so must be freed
           int* random_array = new int[size];
           for (int i = 0; i < size; i++) {
@@ -38,6 +42,10 @@ extern "C" {
 
   void IntArray_generate_random_bit_array(IntArray* arr, int size) {
     arr->generate_random_bit_array(size);
+  }
+
+  void IntArray_set_time_based_random_seed(IntArray* arr) {
+    arr->set_time_based_random_seed();
   }
 
   void self_destruct(IntArray* arr) {
