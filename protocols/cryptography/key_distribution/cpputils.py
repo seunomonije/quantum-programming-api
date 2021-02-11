@@ -9,6 +9,7 @@ lib_int_array = cdll.LoadLibrary('./cpp/libIntArray.so')
 
   CURRENT ISSUES:
     - potential memory leaks/issues. Need to figure out how to diagnose.
+    - fix self_destruct()
 """
 class CPPWrapper(object):
   lib = None
