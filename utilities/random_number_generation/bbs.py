@@ -1,4 +1,4 @@
-from primes import getStrongBlumPrime
+from primes import GeneratePrimes
 
 """
     An implementation of the Blum Blum Shub pseduo-random 
@@ -20,7 +20,8 @@ from primes import getStrongBlumPrime
 """
 def getModulus(bits=2048):
     psize = bits // 2
-    return getStrongBlumPrime(psize) * getStrongBlumPrime(psize)
+    f = lambda x : GeneratePrimes.getStrongBlumPrime(x)
+    return f(psize) * f(psize)
 
 
 class BBS:

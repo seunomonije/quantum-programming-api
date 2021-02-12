@@ -5,40 +5,40 @@ from Crypto.Util import number
     of prime numbers
 """
 
-def isStrongPrime(p):
-    if not number.isPrime(p):
-        return False
+class CheckPrimes:
+    def isPrime(p):
+        return number.isPrime()
+        
+    def isStrongPrime(p):
+        nextp = p + 1
+        while not number.isPrime(nextp):
+            nextp = nextp + 1
 
-    nextp = p + 1
-    while not number.isPrime(nextp):
-        nextp = nextp + 1
+        lastp = p - 1
+        while not number.isPrime(lastp):
+            lastp = lastp - 1
 
-    lastp = p - 1
-    while not number.isPrime(lastp):
-        lastp = lastp - 1
+        return (p * 2 > nextp + lastp)
 
-    return (p * 2 > nextp + lastp)
+    def isBlumPrime(p):
+        return (p % 4) == 3
 
-
-def isBlumPrime(p):
-    return (p % 4) == 3
-
-def isStrongBlumPrime(p):
-    return (isBlumPrime(p) and isStrongPrime(p))
-
-def getPrime(bits=1024, cond=lambda _ : True):
-    while True:
-        p = number.getPrime(bits)
-        if cond(p):
-            return p
+    def isStrongBlumPrime(p):
+        return (isBlumPrime(p) and isStrongPrime(p))
 
 
-def getStrongPrime(bits=1024):
-    return getPrime(bits, isStrongPrime)
+class GeneratePrimes:
+    def getPrime(bits=1024, cond=lambda _ : True):
+        while True:
+            p = number.getPrime(bits)
+            if cond(p):
+                return p
 
-def getBlumPrime(bits=1024):
-    return getPrime(bits, isBlumPrime)
+    def getStrongPrime(bits=1024):
+        return GeneratePrimes.getPrime(bits, CheckPrimes.isStrongPrime)
 
-def getStrongBlumPrime(bits=1024):
-    return getPrime(bits, isStrongBlumPrime)
+    def getBlumPrime(bits=1024):
+        return GeneratePrimes.getPrime(bits, CheckPrimes.isBlumPrime)
 
+    def getStrongBlumPrime(bits=1024):
+        return GeneratePrimes.getPrime(bits, CheckPrimes.isStrongBlumPrime)
