@@ -1,4 +1,4 @@
-from primes import GeneratePrimes
+from primes import GeneratePrimes, CheckPrimes
 
 """
     An implementation of the Blum Blum Shub pseduo-random 
@@ -19,20 +19,30 @@ from primes import GeneratePrimes
     form needed for BBS.
 """
 def getModulus(bits=2048):
-    psize = bits // 2
     f = lambda x : GeneratePrimes.getStrongBlumPrime(x)
-    return f(psize) * f(psize)
+    psize = bits // 2
+
+    p = f(psize)
+    q = f(psize)
+
+    while p == q:       # Ensures p does not equal q
+        q = f(psize)
+
+    return p * q
 
 
 class BBS:
     def __init__(self, seed, bits=2048):
-        self.mod = getModulus(bits)
         self.seq = seed
+        while True:     # Ensures the seed and modulus are coprime                            
+            self.mod = getModulus(bits)
+            if CheckPrimes.areCoPrime(seed, self.mod):
+                break
     
     def seed(self, seed):
         self.seq = seed
 
-    def gen(self, bits):
+    def getNum(self, bits):
         out = int(0)
 
         for _ in range(0, bits):

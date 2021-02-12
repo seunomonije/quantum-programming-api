@@ -5,6 +5,13 @@ from Crypto.Util import number
     of prime numbers
 """
 
+def gcd(a, b):
+    while not b == 0:
+        t = b
+        b = a % b
+        a = t
+    return a
+
 class CheckPrimes:
     def isPrime(p):
         return number.isPrime()
@@ -25,6 +32,9 @@ class CheckPrimes:
 
     def isStrongBlumPrime(p):
         return (CheckPrimes.isBlumPrime(p) and CheckPrimes.isStrongPrime(p))
+
+    def areCoPrime(p, q):
+        return (gcd(p, q) == 1)
 
 
 class GeneratePrimes:
