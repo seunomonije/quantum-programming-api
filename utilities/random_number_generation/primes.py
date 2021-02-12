@@ -24,7 +24,7 @@ class CheckPrimes:
         return (p % 4) == 3
 
     def isStrongBlumPrime(p):
-        return (isBlumPrime(p) and isStrongPrime(p))
+        return (CheckPrimes.isBlumPrime(p) and CheckPrimes.isStrongPrime(p))
 
 
 class GeneratePrimes:
