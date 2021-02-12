@@ -4,3 +4,6 @@ qiskit
 
 # Testing
 pytest
+
+# Crypto
+pycryptodome
