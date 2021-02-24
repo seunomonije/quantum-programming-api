@@ -25,7 +25,14 @@ class IntArray {
           // Allocates new memory so must be freed
           int* random_array = new int[size];
           for (int i = 0; i < size; i++) {
-            random_array[i] = rand() % 2;
+            try
+            {
+              std::random_device rd;
+              random_array[i] = rd() % 2;
+            } catch(...)
+            {
+              random_array[i] = rand() % 2;
+            }
           }
           return random_array;
         }
