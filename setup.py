@@ -13,7 +13,6 @@ setuptools.setup(
   ],
   packages=setuptools.find_packages(),
   py_modules=["qapi"],
-  #package_dir={'':''},
   python_requires=">3.6",
   install_requires=[]
 )
