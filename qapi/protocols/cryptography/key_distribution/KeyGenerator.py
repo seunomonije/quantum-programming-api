@@ -4,7 +4,7 @@ from numpy.random import randint
 import numpy as np
 import re
 
-from qapi.src.protocols.cryptography.key_distribution.exceptions import InvalidBitstringError, InvalidQuantumKeyError
+from qapi.protocols.cryptography.key_distribution.exceptions import InvalidBitstringError, InvalidQuantumKeyError
 
 """
   First iteration of key generation class. 
