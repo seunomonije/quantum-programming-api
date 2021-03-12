@@ -7,8 +7,8 @@ import re
 import os
 import sys
 
-from qapi.src.protocols.cryptography.key_distribution.KeyGenerator import KeyGenerator
-from qapi.src.protocols.cryptography.key_distribution.exceptions import InvalidBitstringError, InvalidQuantumKeyError
+from qapi.protocols.cryptography.key_distribution.KeyGenerator import KeyGenerator
+from qapi.protocols.cryptography.key_distribution.exceptions import InvalidBitstringError, InvalidQuantumKeyError
 
 # Setting a seed for testing purposes
 np.random.seed(seed=0)
