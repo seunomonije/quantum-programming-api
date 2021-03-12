@@ -1,8 +1,7 @@
-import os
-import sys
+import qapi
 
 def main():
-  print('Hello world!')
+  print(qapi)
 
 if __name__ == '__main__':
   main()
