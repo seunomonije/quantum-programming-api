@@ -9,8 +9,8 @@ setuptools.setup(
   url="https://github.com/seunomonije/quantum-programming-api",
   classifiers=[
     "Programming Language :: Python :: 3",
-    "License :: MIT License",
   ],
+  license="Apache 2",
   packages=setuptools.find_packages(),
   py_modules=["qapi"],
   python_requires=">3.6",
