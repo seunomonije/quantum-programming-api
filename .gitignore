@@ -1,9 +1,15 @@
 # Ignore virtual environments
 env/
+env2/
 
 # Caches
 __pycache__/
 .pytest_cache/
+
+#package stuff
+qapi.egg-info/
+build/
+dist/
 
 # Others
 make.txt
