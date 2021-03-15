@@ -26,5 +26,4 @@ client.connect((IP_ADDRESS, PORT))
 data_to_send = pickle.dumps(data)
 """Need to revisit this line later, headers are good"""
 #data_to_send = bytes(f'{len(data_to_send):<{HEADERSIZE}}', "UTF-8") + data_to_send
-#data_to_send = bytes(f'{data_to_send}', 'UTF-8')
 client.send(data_to_send)
