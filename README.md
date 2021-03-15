@@ -1,6 +1,6 @@
 # Quantum Programming API
 
-This API aims to create an infrastructure where programmers can use the power of quantum systems and quantum algorithms in every day programs. The goal of this project is to eventually have plug-and-play package that allows progammers to easily incorporate real quantum computing power into their projects for mainly experimental purposes.
+This API aims to create an infrastructure where programmers can use the power of quantum systems and quantum algorithms in every day programs. The goal of this project is to eventually have plug-and-play package that allows progammers to easily incorporate real quantum computing power into their projects.
 
 **NOTE:** This project is in the development stage.
 
